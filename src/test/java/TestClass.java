@@ -1,8 +1,8 @@
 
-import Steps.FormsPageSteps;
-import Steps.MainPageSteps;
-import Steps.PracticePageSteps;
-import Steps.SubmitPopUpSteps;
+import POM_HW.Steps.FormsPageSteps;
+import POM_HW.Steps.MainPageSteps;
+import POM_HW.Steps.PracticePageSteps;
+import POM_HW.Steps.SubmitPopUpSteps;
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
