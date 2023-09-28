@@ -1,0 +1,19 @@
+[
+  {
+    "name": "passed tests ",
+    "matchedStatus": "passed"
+  },
+  {
+    "name": "Infrastructure problems",
+    "matchedStatuses": ["broken", "failed"]
+  },
+  {
+    "name": "Ignored tests",
+    "matchedStatuses": ["skipped"]
+  },
+  {
+    "name": "Outdated tests",
+    "matchedStatuses": ["broken"],
+    "traceRegex": ".*FileNotFoundException.*"
+  }
+]

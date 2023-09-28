@@ -19,9 +19,6 @@ public class DynamicData {
         map.put("Nov", "ნოემბერი");
         map.put("Dec", "დეკემბერი");
     }
-
-
-
     public Date date=new Date();
     public String dateToString=date.toString();
     public String currentMonth=dateToString.split(" ")[1];

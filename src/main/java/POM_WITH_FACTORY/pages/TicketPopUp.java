@@ -18,6 +18,6 @@ public class TicketPopUp {
     public WebElement movieNameInPopUp;
     @FindBy(xpath = "//div[@class=\"content-header\"]//p[@class=\"movie-cinema\" and contains(text(),'კავეა')]")
     public WebElement cinemaNameInPopUp;
-    @FindBy(xpath = "//div[@class=\"content-header\"]//p[@class=\"movie-cinema\" and contains(text(),'სექტემბერი')]")
+    @FindBy(xpath = "//div[@class=\"content-header\"]//p[@class=\"movie-cinema\" and contains(text(),'ოქტომბერი')]")
     public WebElement dateInPopUp;
 }

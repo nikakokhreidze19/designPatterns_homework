@@ -10,7 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -30,41 +29,37 @@ public class FirstMoviePageSteps {
         this.javascriptExecutor=(JavascriptExecutor)driver;
     }
 
-    @Step
+    @Step("select film")
     public FirstMoviePageSteps selectCaveaEastPoint(){
         WebElement caveaEastPoint= page.caveaEastPoint;
         DynamicData.cinemaName=caveaEastPoint.getText();
         javascriptExecutor.executeScript("arguments[0].scrollIntoView",caveaEastPoint);
         wait.until(ExpectedConditions.elementToBeClickable(caveaEastPoint));
         caveaEastPoint.click();
-
         return this;
     }
 
 
 
-    @Step
+    @Step("select last date of session")
     public FirstMoviePageSteps selectLastDate(){
         List<WebElement> dateOptions=page.dateOptionsTabList.findElements(By.className("ui-tabs-anchor"));
         WebElement lastDate=dateOptions.get(dateOptions.size()-1);
 
         javascriptExecutor.executeScript("arguments[0].scrollIntoView",lastDate);
         wait.until(ExpectedConditions.elementToBeClickable(lastDate));
-
         lastDate.click();
-
-
         return this;
 
     }
 
-    @Step
-    public FirstMoviePageSteps selectLastOption(){
+    @Step("Let's find the last {0}  session")
+    public FirstMoviePageSteps selectLastOption(String caveaText){
         List<WebElement> options=driver.findElements(By.xpath("//*[contains(@id,'day-choose')]/a"));
 
         List<WebElement> eastPointOptions=new ArrayList<>();
         for (WebElement element:options){
-            if(element.getText().contains("კავეა ისთ ფოინთი")){
+            if(element.getText().contains(caveaText)){
                 eastPointOptions.add(element);
             }
         }

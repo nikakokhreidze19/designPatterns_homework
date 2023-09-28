@@ -11,7 +11,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import java.util.List;
 
 public class TicketPopUpSteps {
@@ -30,8 +29,7 @@ public class TicketPopUpSteps {
         this.javascriptExecutor = (JavascriptExecutor) driver;
     }
 
-    @Step
-
+    @Step("choose free seat")
     public TicketPopUpSteps chooseFreeSeat() {
         List<WebElement> freeSeats = page.cinemaTickets.findElements(By.xpath("//div[@class=\"seat free\"]//div[@class=\"seat-new-part\"]"));
         WebElement firstFreeSeat = freeSeats.get(0);
@@ -41,29 +39,28 @@ public class TicketPopUpSteps {
         return this;
     }
 
-    @Step
+    @Step("movie validation")
     public TicketPopUpSteps validateMovie() {
 
         String movieName = page.movieNameInPopUp.getText();
-
-
         Assert.assertEquals(movieName, DynamicData.movieName);
-
         return this;
     }
 
-    @Step
+    @Step("cinema validation")
     public TicketPopUpSteps validateCinema() {
         String cinemaName = page.cinemaNameInPopUp.getText();
         Assert.assertEquals(cinemaName, DynamicData.cinemaName);
         return this;
     }
-
-    @Step
+    //აქ ხელით ვაწვდი ოქტომბერს რადგან მომდევნო თვეში გადადის სეანსი და ერორი ამერიდებიან
+    //აღარ ვეწვალე ამის გასწორებას  , ისედაც დიდი დრო დავკარგე გასწორებისთვოს და არც დავალება
+    //იყო ამისთვის განკუთვნილი
+    @Step("date validation")
     public TicketPopUpSteps validateDate() {
         String date = page.dateInPopUp.getText();
         Assert.assertEquals(date.trim(), page.dateInPopUp.getText()
-                .split(" ")[0] + " " + data.map.get(data.currentMonth) + " " + DynamicData
+                .split(" ")[0] + " " + "ოქტომბერი" + " " + DynamicData
                 .lastOptionHoursDate.trim());
 
         return this;

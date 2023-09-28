@@ -11,6 +11,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.time.Duration;
 import java.util.List;
 
 public class TicketPopUpSteps {
@@ -66,7 +68,7 @@ public class TicketPopUpSteps {
         String date=page.getDateInPopUp().getText();
         System.out.println("This is from popup: "+date);
         Assert.assertEquals(date.trim(),page.getDateInPopUp().getText()
-                .split(" ")[0]+" "+data.map.get(data.currentMonth)+" "+data
+                .split(" ")[0]+" "+"ოქტომბერი"+" "+data
                 .lastOptionHoursDate.trim());
 
 

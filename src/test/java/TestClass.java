@@ -1,4 +1,3 @@
-
 import POM_HW.Steps.FormsPageSteps;
 import POM_HW.Steps.MainPageSteps;
 import POM_HW.Steps.PracticePageSteps;
@@ -6,7 +5,6 @@ import POM_HW.Steps.SubmitPopUpSteps;
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-
 import static com.codeborne.selenide.Selenide.*;
 
 public class TestClass {
@@ -23,7 +21,6 @@ public class TestClass {
         open("https://demoqa.com/");
 
     }
-
     @org.testng.annotations.Test
     public void Test(){
         homePageSteps.clickFormsElement();
