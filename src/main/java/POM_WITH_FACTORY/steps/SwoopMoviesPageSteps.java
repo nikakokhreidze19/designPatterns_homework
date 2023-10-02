@@ -1,6 +1,5 @@
 package POM_WITH_FACTORY.steps;
 
-
 import POM_WITH_FACTORY.data.DynamicData;
 import POM_WITH_FACTORY.pages.SwoopMoviesPage;
 import io.qameta.allure.Step;
@@ -11,9 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-
-
 import java.util.List;
 
 public class SwoopMoviesPageSteps {
@@ -42,7 +38,7 @@ public class SwoopMoviesPageSteps {
         }
         return null;
     }
-    @Step
+    @Step("click buy button")
     public SwoopMoviesPageSteps clickOnBuyFirstMovie(){
 
         page.firstMovie=firstMovieElement();

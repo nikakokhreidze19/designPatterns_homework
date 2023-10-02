@@ -40,11 +40,17 @@ public class TestSwoopWithoutFactory{
         actionsForMoviesPage.clickOnBuyFirstMovie();
 
 
-        actionsForFirstMovie.selectCaveaEastPoint().selectLastDate()
+        actionsForFirstMovie.
+                selectCaveaEastPoint().
+                selectLastDate()
                 .selectLastOption();
 
 
-        actionsForBuyTicketPopUp.chooseFreeSeat().validateCinema().validateMovie().validateDate();
+        actionsForBuyTicketPopUp.
+                chooseFreeSeat().
+                validateCinema().
+                validateMovie().
+                validateDate();
 
 
 

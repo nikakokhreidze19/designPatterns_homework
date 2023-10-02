@@ -29,8 +29,8 @@ public class Data {
 
 
 
-    public  String lastOptionHoursDate="22:15";
-    public String movieName="მონაზვნის წყევლა II R",cinemaName="კავეა ისთ ფოინთი";
+    public  String lastOptionHoursDate="14:15";
+    public String movieName="ლეიდიბაგისა და სუპერ-კატის საოცარი თავგადასავალი PG",cinemaName="კავეა ისთ ფოინთი";
 
 
 }
